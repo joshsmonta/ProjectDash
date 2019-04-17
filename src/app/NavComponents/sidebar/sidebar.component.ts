@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NbSidebarService, NbMenuItem, NbMenuService } from '@nebular/theme';
 
 import { faBars, faChartLine } from '@fortawesome/free-solid-svg-icons';
-import { from } from 'rxjs';
-import { fstatSync } from 'fs';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,8 +14,8 @@ export class SidebarComponent implements OnInit {
   items: NbMenuItem[] = [
     { 
       title: 'Sales Reports',
-      icon: '',
       expanded: true,
+      icon: 'nb-bar-chart',
       children: [
         { title: 'Site', link: '/sales-site' },
         { title: 'Salesman', link: '/sales-man' },
