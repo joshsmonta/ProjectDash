@@ -17,6 +17,8 @@ import { SidebarComponent } from './NavComponents/sidebar/sidebar.component';
 import { SalesReportSiteComponent } from './SalesReports/sales-report-site/sales-report-site.component';
 import { SalesReportFssComponent } from './SalesReports/sales-report-fss/sales-report-fss.component';
 import { SalesReportSalesmanComponent } from './SalesReports/sales-report-salesman/sales-report-salesman.component';
+import { ThemeSwitcherComponent } from './NavComponents/theme-switcher/theme-switcher.component';
+import { ThemeSwitcherListComponent } from './NavComponents/theme-switcher/themes-switcher-list/themes-switcher-list.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { SalesReportSalesmanComponent } from './SalesReports/sales-report-salesm
     SidebarComponent,
     SalesReportSiteComponent,
     SalesReportFssComponent,
-    SalesReportSalesmanComponent
+    SalesReportSalesmanComponent,
+    ThemeSwitcherComponent,
+    ThemeSwitcherListComponent
   ],
   imports: [
     BrowserModule,

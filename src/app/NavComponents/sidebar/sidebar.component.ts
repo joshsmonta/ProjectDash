@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NbSidebarService, NbMenuItem, NbMenuService } from '@nebular/theme';
+import { NbSidebarService, NbMenuItem, NbMenuService, NbThemeService } from '@nebular/theme';
 
 import { faBars, faChartLine } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,15 +24,19 @@ export class SidebarComponent implements OnInit {
     },
   ];
 
-  constructor(private sidebarService: NbSidebarService) { }
+  constructor(private sidebarService: NbSidebarService, private themeService: NbThemeService) { }
 
   toggle() {
     this.sidebarService.toggle(true);
     return false;
   }
 
+  enableTheme() {
+    this.themeService.changeTheme('corporate')
+  }
+
   ngOnInit() {
-    
+    this.enableTheme();
   }
 
 }

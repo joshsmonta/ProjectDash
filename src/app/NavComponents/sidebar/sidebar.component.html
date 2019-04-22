@@ -1,6 +1,10 @@
 <nb-layout>
   <nb-layout-header fixed>
-    <a href="#" (click)="toggle()"><fa-icon [icon]="faBars"></fa-icon></a>
+    <div class="logo-container">
+        <a href="#" (click)="toggle()"><fa-icon [icon]="faBars"></fa-icon></a>
+        <div class="logo" (click)="goToHome()">ssdi-<span>alpha</span></div>
+    </div>
+    <ngx-theme-switcher></ngx-theme-switcher>
   </nb-layout-header>
 
   <nb-sidebar>
