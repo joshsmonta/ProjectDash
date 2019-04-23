@@ -12,6 +12,9 @@
                     width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
                 }
             }
+            nb-sidebar {
+                nb-menu { }
+            }
             nb-layout-column {
                 height: 50vw;
                 :first-child {

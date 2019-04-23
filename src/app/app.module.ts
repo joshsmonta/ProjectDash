@@ -8,7 +8,9 @@ import { NbThemeModule,
   NbLayoutModule, 
   NbSidebarModule,
   NbMenuModule,
-  NbCardModule
+  NbCardModule,
+  NbPopoverModule,
+  NbUserModule
 } from '@nebular/theme';
 
 import { AppComponent } from './app.component';
@@ -40,7 +42,9 @@ import { ThemeSwitcherListComponent } from './NavComponents/theme-switcher/theme
     NbMenuModule.forRoot(),
     NbThemeModule.forRoot({name: 'cosmic'}),
     RouterModule.forRoot(appRoutes),
-    FontAwesomeModule
+    FontAwesomeModule,
+    NbPopoverModule,
+    NbUserModule
   ],
   providers: [NbSidebarService],
   bootstrap: [AppComponent]

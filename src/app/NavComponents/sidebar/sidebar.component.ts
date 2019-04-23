@@ -14,7 +14,7 @@ export class SidebarComponent implements OnInit {
   items: NbMenuItem[] = [
     { 
       title: 'Sales Reports',
-      expanded: true,
+      expanded: false,
       icon: 'nb-bar-chart',
       children: [
         { title: 'Site', link: '/sales-site' },
@@ -32,7 +32,7 @@ export class SidebarComponent implements OnInit {
   }
 
   enableTheme() {
-    this.themeService.changeTheme('corporate')
+    this.themeService.changeTheme('default')
   }
 
   ngOnInit() {
