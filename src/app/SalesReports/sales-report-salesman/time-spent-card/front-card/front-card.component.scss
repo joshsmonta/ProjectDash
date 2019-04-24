@@ -1,0 +1,44 @@
+@import "../../../../../themes.scss";
+
+@include nb-install-component() {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  /deep/ nb-card-header {
+    display: flex;
+    justify-content: space-between;
+
+    .header-container {
+      display: flex;
+      @include nb-rtl(flex-direction, row-reverse);
+    }
+
+    .title {
+      padding-left: 1rem;
+    }
+  }
+
+  /deep/ nb-card-body {
+    display: flex;
+    position: relative;
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+
+    .display-3 {
+      position: relative;
+      margin-left: 130px;
+    }
+    .display-4 {
+      position: relative;
+      margin-left: 10px;
+    }
+    .chart {
+      flex: 1;
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
