@@ -29,6 +29,8 @@ import { ChartsModule } from "ng2-charts";
 import { SalesChartComponent } from "./SalesReports/sales-report-salesman/sales-card/sales-chart/sales-chart.component";
 import { SalesYearChartComponent } from "./SalesReports/sales-report-salesman/sales-card/sales-year-chart/sales-year-chart.component";
 import { SalesCardComponent } from "./SalesReports/sales-report-salesman/sales-card/sales-card.component";
+import { PjpcomCardComponent } from './SalesReports/sales-report-salesman/pjpcom-card/pjpcom-card.component';
+import { QuotaCardComponent } from './SalesReports/sales-report-salesman/quota-card/quota-card.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { SalesCardComponent } from "./SalesReports/sales-report-salesman/sales-c
     BackCardComponent,
     SalesChartComponent,
     SalesYearChartComponent,
-    SalesCardComponent
+    SalesCardComponent,
+    PjpcomCardComponent,
+    QuotaCardComponent
   ],
   imports: [
     BrowserModule,

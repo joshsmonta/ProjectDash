@@ -1,0 +1,15 @@
+<nb-card status="success">
+  <nb-card-header>Sample Chart</nb-card-header>
+  <nb-card-body>
+    <div>
+      <canvas
+        baseChart
+        [data]="pieChartData"
+        [colors]="colors"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+      >
+      </canvas>
+    </div>
+  </nb-card-body>
+</nb-card>

@@ -1,25 +1,41 @@
-@import '../../../themes';
-
+@import "../../../themes";
 
 @include nb-install-component() {
-        background: nb-theme(nb-layout);
-        nb-layout {
-            nb-layout-header {
-                a { font-size: 2rem; text-decoration: none;  }
-                .logo-container {
-                    display: flex;
-                    align-items: center;
-                    width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
-                }
-            }
-            nb-sidebar {
-                nb-menu { }
-            }
-            nb-layout-column {
-                height: 50vw;
-                :first-child {
-                    background: #f4f4f7;
-                }
-            }
+  background: nb-theme(nb-layout);
+  nb-layout {
+    nb-layout-header {
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+      }
+      .logo-container {
+        display: flex;
+        align-items: center;
+        width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
+
+        .logo {
+          padding: 0 nb-theme(padding);
+          font-size: 1.75rem;
+          font-weight: nb-theme(font-weight-bolder);
+          @include nb-ltr(border-left, 1px solid nb-theme(separator));
+          @include nb-rtl(border-right, 1px solid nb-theme(separator));
+          white-space: nowrap;
+
+          span {
+            font-weight: nb-theme(font-weight-normal);
+          }
         }
+      }
+    }
+    nb-sidebar {
+      nb-menu {
+      }
+    }
+    nb-layout-column {
+      height: 50vw;
+      :first-child {
+        background: #f4f4f7;
+      }
+    }
+  }
 }

@@ -2,12 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { LINE_CHART_COLORS } from "../sales-chart/chart-colors";
 
 const LINE_CHART_DATA: any[] = [
-  { data: [520, 530, 540, 120, 320, 560], label: "2017" },
-  { data: [500, 406, 120, 230, 308, 530], label: "2018" },
-  { data: [210, 340, 430, 140, 210, 200], label: "Forecasting 2019" }
+  { data: [240, 120, 320, 560], label: "TOTAL SALES" }
 ];
 
-const LINE_CHART_LABELS: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+const LINE_CHART_LABELS: string[] = ["2016", "2017", "2018", "2019"];
 
 @Component({
   selector: "app-sales-year-chart",

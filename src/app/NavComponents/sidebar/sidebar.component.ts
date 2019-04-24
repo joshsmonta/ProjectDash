@@ -1,30 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import { NbSidebarService, NbMenuItem, NbMenuService, NbThemeService } from '@nebular/theme';
+import { Component, OnInit } from "@angular/core";
+import {
+  NbSidebarService,
+  NbMenuItem,
+  NbMenuService,
+  NbThemeService
+} from "@nebular/theme";
 
-import { faBars, faChartLine } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChartLine } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  selector: "app-sidebar",
+  templateUrl: "./sidebar.component.html",
+  styleUrls: ["./sidebar.component.scss"]
 })
 export class SidebarComponent implements OnInit {
   faBars = faBars;
-  faChartLine = faChartLine
+  faChartLine = faChartLine;
   items: NbMenuItem[] = [
-    { 
-      title: 'Sales Reports',
+    {
+      title: "Sales Reports",
       expanded: false,
-      icon: 'nb-bar-chart',
+      icon: "nb-bar-chart",
       children: [
-        { title: 'Site', link: '/sales-site' },
-        { title: 'Salesman', link: '/sales-man' },
-        { title: 'FSS', link: '/sales-fss' },
-      ],
-    },
+        { title: "Site", link: "/sales-site" },
+        { title: "Salesman", link: "/sales-man" },
+        { title: "FSS", link: "/sales-fss" }
+      ]
+    }
   ];
 
-  constructor(private sidebarService: NbSidebarService, private themeService: NbThemeService) { }
+  constructor(
+    private sidebarService: NbSidebarService,
+    private themeService: NbThemeService
+  ) {}
 
   toggle() {
     this.sidebarService.toggle(true);
@@ -32,11 +40,10 @@ export class SidebarComponent implements OnInit {
   }
 
   enableTheme() {
-    this.themeService.changeTheme('default')
+    this.themeService.changeTheme("default");
   }
 
   ngOnInit() {
     this.enableTheme();
   }
-
 }
