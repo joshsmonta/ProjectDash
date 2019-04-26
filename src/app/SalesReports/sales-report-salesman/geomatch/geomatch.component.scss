@@ -1,0 +1,18 @@
+@import "../../../../themes.scss";
+
+@include nb-install-component() {
+  nb-card {
+    margin: auto;
+    nb-card-body {
+      .container {
+        flex: auto !important;
+        display: flex;
+        align-items: center;
+
+        nb-progress-bar {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

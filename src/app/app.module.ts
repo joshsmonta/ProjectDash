@@ -11,7 +11,11 @@ import {
   NbMenuModule,
   NbCardModule,
   NbPopoverModule,
-  NbUserModule
+  NbUserModule,
+  NbActionsModule,
+  NbProgressBarModule,
+  NbListModule,
+  NbContextMenuModule
 } from "@nebular/theme";
 
 import { AppComponent } from "./app.component";
@@ -29,8 +33,9 @@ import { ChartsModule } from "ng2-charts";
 import { SalesChartComponent } from "./SalesReports/sales-report-salesman/sales-card/sales-chart/sales-chart.component";
 import { SalesYearChartComponent } from "./SalesReports/sales-report-salesman/sales-card/sales-year-chart/sales-year-chart.component";
 import { SalesCardComponent } from "./SalesReports/sales-report-salesman/sales-card/sales-card.component";
-import { PjpcomCardComponent } from './SalesReports/sales-report-salesman/pjpcom-card/pjpcom-card.component';
-import { QuotaCardComponent } from './SalesReports/sales-report-salesman/quota-card/quota-card.component';
+import { PjpcomCardComponent } from "./SalesReports/sales-report-salesman/pjpcom-card/pjpcom-card.component";
+import { QuotaCardComponent } from "./SalesReports/sales-report-salesman/quota-card/quota-card.component";
+import { GeomatchComponent } from "./SalesReports/sales-report-salesman/geomatch/geomatch.component";
 
 @NgModule({
   declarations: [
@@ -48,7 +53,8 @@ import { QuotaCardComponent } from './SalesReports/sales-report-salesman/quota-c
     SalesYearChartComponent,
     SalesCardComponent,
     PjpcomCardComponent,
-    QuotaCardComponent
+    QuotaCardComponent,
+    GeomatchComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +68,10 @@ import { QuotaCardComponent } from './SalesReports/sales-report-salesman/quota-c
     FontAwesomeModule,
     NbPopoverModule,
     NbUserModule,
+    NbActionsModule,
+    NbProgressBarModule,
+    NbListModule,
+    NbContextMenuModule,
     ChartsModule
   ],
   providers: [NbSidebarService],

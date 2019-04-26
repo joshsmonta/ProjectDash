@@ -3,6 +3,9 @@
 @include nb-install-component() {
   background: nb-theme(nb-layout);
   nb-layout {
+    nb-layout-column.small {
+      flex: auto !important;
+    }
     nb-layout-header {
       a {
         font-size: 2rem;
@@ -25,16 +28,6 @@
             font-weight: nb-theme(font-weight-normal);
           }
         }
-      }
-    }
-    nb-sidebar {
-      nb-menu {
-      }
-    }
-    nb-layout-column {
-      height: 50vw;
-      :first-child {
-        background: #f4f4f7;
       }
     }
   }

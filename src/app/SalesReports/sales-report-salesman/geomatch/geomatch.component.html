@@ -1,0 +1,55 @@
+<nb-card>
+  <nb-card-header>GeoMatch Percentage</nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="container">
+        <nb-actions size="medium">
+          <nb-action
+            icon="nb-arrow-down"
+            (click)="setValue(value - 25)"
+          ></nb-action>
+        </nb-actions>
+        <nb-progress-bar
+          size="xlg"
+          [value]="value"
+          [status]="status"
+          [displayValue]="true"
+        ></nb-progress-bar>
+        <nb-actions size="medium">
+          <nb-action
+            icon="nb-arrow-up"
+            (click)="setValue(value + 25)"
+          ></nb-action>
+        </nb-actions>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-6">
+        <nb-card class="list-card" size="xsmall">
+          <nb-card-header>Matched Location</nb-card-header>
+          <nb-card-body>
+            <nb-list>
+              <nb-list-item *ngFor="let locs of matched">
+                {{ locs }}
+              </nb-list-item>
+            </nb-list>
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+      <div class="col-md-6">
+        <nb-card class="list-card" size="xsmall">
+          <nb-card-header>Pending Matches</nb-card-header>
+          <nb-card-body>
+            <nb-list>
+              <nb-list-item *ngFor="let pens of pending">
+                {{ pens }}
+              </nb-list-item>
+            </nb-list>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

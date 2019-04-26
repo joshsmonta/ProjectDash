@@ -1,7 +1,10 @@
-<div class="themes-switcher"
-     [nbPopover]="switcherListComponent"
-     nbPopoverPlacement="bottom"
-     [nbPopoverContext]="{ popover: popover }">
+<div
+  class="themes-switcher"
+  [nbContextMenu]="themes"
+  nbContextMenuTrigger="click"
+  nbContextMenuTag="my-context-menu"
+  (click)="onToggleTheme()"
+>
   <i class="nb-drops"></i>
   <span *ngIf="showTitle">Themes</span>
 </div>

@@ -1,12 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  NbSidebarService,
-  NbMenuItem,
-  NbMenuService,
-  NbThemeService
-} from "@nebular/theme";
+import { NbSidebarService, NbMenuItem, NbThemeService } from "@nebular/theme";
 
 import { faBars, faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { ChartsModule, ThemeService } from "ng2-charts";
 
 @Component({
   selector: "app-sidebar",
@@ -40,7 +36,7 @@ export class SidebarComponent implements OnInit {
   }
 
   enableTheme() {
-    this.themeService.changeTheme("default");
+    this.themeService.changeTheme("cosmic");
   }
 
   ngOnInit() {

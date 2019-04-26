@@ -1,18 +1,21 @@
-<nb-layout>
+<nb-layout withScroll>
   <nb-layout-header fixed>
     <div class="logo-container">
       <a href="#" (click)="toggle()"><fa-icon [icon]="faBars"></fa-icon></a>
       <div class="logo" (click)="goToHome()">project-<span>dash</span></div>
     </div>
+    <ngx-theme-switcher></ngx-theme-switcher>
   </nb-layout-header>
 
   <nb-sidebar>
     <nb-menu tag="menu" [items]="items"></nb-menu>
   </nb-sidebar>
 
-  <nb-layout-column>
+  <nb-layout-column start>
     <ng-content></ng-content>
   </nb-layout-column>
+
+  <nb-layout-footer fixed>Contact us</nb-layout-footer>
 </nb-layout>
 
 <!--

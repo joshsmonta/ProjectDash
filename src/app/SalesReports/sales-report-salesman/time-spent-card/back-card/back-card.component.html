@@ -7,6 +7,15 @@
   </div>
 </nb-card-header>
 <nb-card-body>
-  <h1 class="display-3">4.8/</h1>
-  <h1 class="display-4">day</h1>
+  <div style="display: block; margin-left: auto; margin-right: auto;">
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+    >
+    </canvas>
+  </div>
 </nb-card-body>

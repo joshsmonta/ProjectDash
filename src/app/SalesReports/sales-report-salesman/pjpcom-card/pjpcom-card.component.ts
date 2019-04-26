@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ChartOptions } from "chart.js";
 
 @Component({
   selector: "app-pjpcom-card",
@@ -14,4 +15,8 @@ export class PjpcomCardComponent implements OnInit {
   pieChartLabels: string[] = ["Label A", "Label B"];
   colors: any[] = [{ backgroundColor: ["#95ff49", "#49deff"] }];
   pieChartType = "doughnut";
+  public pieChartOptions: ChartOptions = {
+    maintainAspectRatio: true,
+    legend: { position: "left" }
+  };
 }

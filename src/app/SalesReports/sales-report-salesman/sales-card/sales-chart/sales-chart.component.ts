@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { LINE_CHART_COLORS } from "./chart-colors";
+import { ChartOptions } from "chart.js";
 
 const LINE_CHART_DATA: any[] = [
   { data: [520, 530, 540, 120, 320, 560], label: "2017" },
@@ -21,9 +22,16 @@ export class SalesChartComponent implements OnInit {
 
   lineChartData = LINE_CHART_DATA;
   lineChartLabels = LINE_CHART_LABELS;
-  lineChartOptions: any = {
+  lineChartOptions: ChartOptions = {
     responsive: true,
-    maintainAspectRatio: true
+    maintainAspectRatio: true,
+    scales: { xAxes: [{}], yAxes: [{}] },
+    plugins: {
+      datalabels: {
+        anchor: "end",
+        align: "end"
+      }
+    }
   };
 
   lineChartLegend: true;
