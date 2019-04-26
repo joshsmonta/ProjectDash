@@ -36,7 +36,7 @@ export class SidebarComponent implements OnInit {
   }
 
   enableTheme() {
-    this.themeService.changeTheme("cosmic");
+    this.themeService.changeTheme("default");
   }
 
   ngOnInit() {

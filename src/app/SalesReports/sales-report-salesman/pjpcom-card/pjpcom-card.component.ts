@@ -13,7 +13,7 @@ export class PjpcomCardComponent implements OnInit {
 
   pieChartData: number[] = [60, 40];
   pieChartLabels: string[] = ["Label A", "Label B"];
-  colors: any[] = [{ backgroundColor: ["#95ff49", "#49deff"] }];
+  colors: any[] = [{ backgroundColor: ["#58d2ff", "#58ff85"] }];
   pieChartType = "doughnut";
   public pieChartOptions: ChartOptions = {
     maintainAspectRatio: true,
